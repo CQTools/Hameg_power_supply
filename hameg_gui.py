@@ -9,13 +9,10 @@ Created on Tue Apr 21 15:26:04 2015
 import sys
 import glob
 import serial
-import json
-import urllib2
 import hameg_control as hc
 from PyQt4 import QtGui, uic
 from PyQt4.QtCore import QTimer
-from PyQt4.QtGui import QPixmap
-import datetime
+
 
 
 form_class = uic.loadUiType("hamegcontrol.ui")[0] 
