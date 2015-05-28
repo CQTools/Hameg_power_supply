@@ -23,7 +23,7 @@ class Hameg(object):
 		self.serial = self._open_port(port)
 		
 	def _open_port(self, port):
-		ser = serial.Serial(port, self.baudrate, timeout=5)
+		ser = serial.Serial(port, self.baudrate, timeout=1)
 		ser.readline()
 		ser.timeout = 1
 		return ser
