@@ -50,7 +50,7 @@ class Hameg(object):
 		
 	def get_voltage(self,channel):
 		self._serial_write('INST OUT'+str(channel))
-		self._serial_write('VOLT?')
+		self._serial_write('MEAS:VOLT?')
 		return self._serial_read()
 		
 	def set_current(self,channel,value):
@@ -59,7 +59,7 @@ class Hameg(object):
 		
 	def get_current(self,channel):
 		self._serial_write('INST OUT'+str(channel))
-		self._serial_write('CURR?')
+		self._serial_write('MEAS:CURR?')
 		return self._serial_read()
 	
 	def output_on(self,channel):
